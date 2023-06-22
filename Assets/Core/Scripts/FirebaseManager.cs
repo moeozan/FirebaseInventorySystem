@@ -205,7 +205,7 @@ public class FirebaseManager : MonoBehaviour
                         //Now return to login screen
 
                         UserData userdata = new(emailRegisterField.text, passwordRegisterField.text);
-                        SaveUserToFireStore(userdata, User.DisplayName);
+                        StartCoroutine(SaveUserToFireStore(userdata, User.DisplayName));
                         informationText.text = "Register Success";
                         Debug.Log(userdata.UserInventory.Slots.Length);
                     }
